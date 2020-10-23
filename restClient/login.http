@@ -1,0 +1,27 @@
+### Login wrong user
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "mima",
+    "pass": "1234"
+}
+
+### Login wrong pass
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "mima",
+    "pass": "1235"
+}
+
+### Login correct
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "nene",
+    "pass": "1234",
+    "tokenFCM": "djkshskjdhkj"
+}

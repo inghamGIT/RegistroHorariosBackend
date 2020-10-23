@@ -1,0 +1,114 @@
+### Get all
+GET http://localhost:3000/registros/ HTTP/1.1
+
+### Get by id
+GET http://localhost:3000/registros/5f718a6ca4c36f1b049fc434 HTTP/1.1
+
+### Get by userId
+GET http://localhost:3000/registros/user/5f91d7663ac86b66f811a37d HTTP/1.1
+
+### Get by Date
+GET http://localhost:3000/registros/date/5f91d7663ac86b66f811a37d HTTP/1.1
+
+### Get this week
+GET http://localhost:3000/registros/week/5f7e90a72591f8231c9376cd HTTP/1.1
+
+### Get this week FRC
+GET http://localhost:3000/registros/week/5f7508d1ad23462760a3d282 HTTP/1.1
+
+### Update
+PUT http://localhost:3000/registros/5f764335f9e627078c090a44 HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": "8:30",
+        "horaSalida": "12:50",
+        "fecha": "2020-10-01T14:00:00.000Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "probando"
+}
+
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+      "horaEntrada": "9:00",
+      "horaSalida": "14:00",
+      "fecha": "2020-10-21T14:00:00.000Z",
+      "user": "5f903cb1f6c866499c4dbe7a",
+      "descripcion": "migrando proyecto"
+}
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": "9:00",
+        "horaSalida": "17:30",
+        "fecha": "2020-09-22T19:51:21.204Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "martes"
+}
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": "9:00",
+        "horaSalida": "17:30",
+        "fecha": "2020-09-30T19:51:21.204Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "miercoles"
+}
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": 9,
+        "horaSalida": 21,
+        "fecha": "2020-09-24T19:51:21.204Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "jueves"
+}
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": 9,
+        "horaSalida": 21,
+        "fecha": "2020-09-25T19:51:21.204Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "viernes"
+}
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": 9,
+        "horaSalida": 21,
+        "fecha": "2020-09-26T19:51:21.204Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "sabado"
+}
+
+### Store data
+POST http://localhost:3000/registros HTTP/1.1
+content-type: application/json
+
+{
+        "horaEntrada": 9,
+        "horaSalida": 21,
+        "fecha": "2020-09-27T19:51:21.204Z",
+        "user": "5f6f88c44786ab280896ecf1",
+        "descripcion": "domingo"
+}

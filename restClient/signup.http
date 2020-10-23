@@ -1,0 +1,25 @@
+### Signup user
+POST http://localhost:3000/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+        "nomEmp": "Francisco",
+        "apeEmp": "Rodríguez Cruz",
+        "username": "fran",
+        "pass": "1234",
+        "confirm": "1234",
+        "email": "rodriguezcruzfrancisco@gmail.com"
+}
+
+### Signup user
+POST http://localhost:3000/auth/signup HTTP/1.1
+content-type: application/json
+
+{
+        "nomEmp": "Nel",
+        "apeEmp": "Nel",
+        "username": "nene",
+        "pass": "1234",
+        "confirm": "1234",
+        "email": "nel@gmail.com"
+}
