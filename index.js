@@ -30,10 +30,12 @@ app.use('/registros', routerRegistros);
 app.use('/auth', routerAuth);
 
 // Cron task test
+/*
 cron.schedule('* * * * *', () => {
     console.log('Enviando mensajes...');
     functionController.notify();
 });
+*/
 
 /*
 // Cron task programada (todos los días a las 18:00)

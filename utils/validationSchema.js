@@ -3,7 +3,6 @@ const Joi = require('joi');
 const registerSchema = Joi.object({
 
     nomEmp: Joi.string()
-        .alphanum()
         .min(3)
         .max(30)
         .required(),

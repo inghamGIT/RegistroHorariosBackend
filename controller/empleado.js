@@ -43,22 +43,22 @@ async function getByUsername (req, res) {
 async function updatePass (req, res) {
     try {
         const empleadoId = req.params.id;
-        const { pass, newPass, confirm } = req.body
+        const { oldpass, pass, confirm } = req.body
 
-        if (newPass !== confirm) {
+        if (pass !== confirm) {
             return res.status(401).send({ mensaje: 'Las contraseñas no coinciden.' });
         }
 
         //Comprobamos que la contraseña coincide.
         const emp = await Empleado.findById(empleadoId);     
-        const passValido = await bcrypt.compare(pass, emp.pass);
+        const passValido = await bcrypt.compare(oldpass, emp.pass);
         if (!passValido) {
             return res.status(401).send({ mensaje: 'Contraseña erronea.' });
         }
         
         //Hash password
         const salt = await bcrypt.genSalt(10);
-        const hashedPassword = await bcrypt.hash(newPass, salt);
+        const hashedPassword = await bcrypt.hash(pass, salt);
         let o_id = new ObjectId(empleadoId);
 
         let empleado = await Empleado.updateOne({ _id: o_id }, {$set: {pass: hashedPassword}});
