@@ -67,7 +67,7 @@ async function getThisWeek (req, res) {
             registrosSalida.push(vacio);
         }
 
-        let date = new Date();
+        let date = new Date(); //'2020-09-27' para otro ejemplo
         let diaSemana;
         if (date.getDay() === 0) diaSemana = 7; //Cambiamos a semana española [l-d]
         else diaSemana = date.getDay();
