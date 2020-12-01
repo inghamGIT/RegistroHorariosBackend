@@ -3,12 +3,12 @@ const router = Router();
 const controller = require('../controller/registro');
 const authNeeded = require('../utils/functions');
 
-router.get('/', controller.getAll);
-router.get('/date/:id', controller.getByDate);
-router.get('/user/:userId', controller.getByUserId);
-router.get('/week/:id', controller.getThisWeek);
-router.post('/', controller.insert);
-router.put('/:id', controller.update);
-router.delete('/:id', authNeeded.verifyToken, controller.remove); //TODO
+router.get('/', authNeeded.verifyToken, controller.getAll);
+router.get('/date/:id', authNeeded.verifyToken, controller.getByDate);
+router.get('/user/:userId', authNeeded.verifyToken, controller.getByUserId);
+router.get('/week/:id', authNeeded.verifyToken, controller.getThisWeek);
+router.post('/', authNeeded.verifyToken, controller.insert);
+router.put('/:id', authNeeded.verifyToken, controller.update);
+router.delete('/:id', authNeeded.verifyToken, controller.remove);
 
 module.exports = router;
